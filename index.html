@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Application Form</h1>
+
+    <div class="form-container">
+        <form>
+            <section>
+                <h2>A. General Questions</h2>
+                <label>Proposed Insured Name:
+                    <input type="text" name="insured_name" required>
+                </label>
+
+                <label>Birth Date:
+                    <input type="date" name="birth_date" required>
+                </label>
+
+                <label>Gender:
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+
+                <label>Email Address:
+                    <input type="email" placeholder="abc@gmail.com" name="email" required>
+                </label>
+
+                <label>Phone Number:
+                    <input type="tel" placeholder="+92" name="phone">
+                </label>
+
+                <label>ID Number:
+                    <input type="text" name="id_number" required>
+                </label>
+
+                <label>Social Security Number:
+                    <input type="text" name="ssn" required>
+                </label>
+
+                <label>Status:
+                    <select name="status">
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                        <option>Others</option>
+                    </select>
+                </label>
+
+                <label>Are You Retiree?
+                    <input type="radio" name="retiree" value="yes"> Yes
+                    <input type="radio" name="retiree" value="no"> No
+                </label>
+            </section>
+
+            <section>
+                <h2>B. Type of Health Coverage</h2>
+                <table>
+                    <tr>
+                        <th>Employee:</th>
+                        <td><input type="checkbox" name="employee_yes"> Yes
+                            <input type="checkbox" name="employee_no"> No</td>
+                        <th>Spouse:</th>
+                        <td><input type="checkbox" name="spouse_yes"> Yes
+                            <input type="checkbox" name="spouse_no"> No</td>
+                    </tr>
+                    <tr>
+                        <th>Children:</th>
+                        <td colspan="3"><input type="checkbox" name="children_yes"> Yes
+                            <input type="checkbox" name="children_no"> No</td>
+                    </tr>
+                </table>
+                <p>Complete if spouse/children are proposed for insurance:</p>
+                <table>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Name</th>
+                        <th>Relationship</th>
+                        <th>Birth Date</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                    <!-- Repeat this row for each entry -->
+                    <!-- Example for 2 rows -->
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="date" min="1920-12-31"></td>
+                        <td><input type="number" min="1" max="100"></td>
+                        <td>
+                            <select name="dep_gender_1">
+                                <option value="">--</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </section>
+
+            <section>
+                <h2>C. The Policy</h2>
+                <label>Unit:
+                    <input type="text" required>
+                </label>
+
+                <label>Annual Premium:
+                    <input type="text" required>
+                </label>
+
+                <label>Payment Method:</label>
+                <label><input type="checkbox" name="payment" value="annual"> Annual</label>
+                <label><input type="checkbox" name="payment" value="semi-annual"> Semi-Annual</label>
+                <label><input type="checkbox" name="payment" value="monthly"> Monthly PAT</label>
+
+                <label>Cash with Application:
+                    <input type="text" required>
+                </label>
+
+                <label>Planned with Premium:
+                    <input type="text" required>
+                </label>
+            </section>
+
+            <section class="terms">
+                <h3>Terms and Conditions</h3>
+                <p><em><mark>Improvement should be measured regularly and assessed in order for you to know what’s beneficial and what is not. This will help you set new targets.</mark></em></p>
+
+                <label>Signature:
+                    <input type="text" required>
+                </label>
+
+                <label>Date:
+                    <input type="date" required>
+                </label>
+            </section>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
